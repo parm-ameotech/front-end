@@ -1,0 +1,25 @@
+<button (click)="goBack()" class="bckbtn">Back</button>
+
+<table>
+    <thead>
+      <tr>
+        <th>Id </th>
+        <th>Title </th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let album of albums">
+        <td>
+          {{album.id}}
+        </td>
+        <td>
+          {{album.title}}
+        </td>
+        <td>
+          <a [routerLink]="['/photos/', album.id]">View Photos</a>
+        </td>
+  
+      </tr>
+    </tbody>
+  </table>

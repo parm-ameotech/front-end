@@ -1,0 +1,25 @@
+<button (click)="goBack()" class="bckbtn">Back</button>
+
+<table>
+    <thead>
+      <tr>
+        <th>Id </th>
+        <th>Title </th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let photo of photos">
+        <td>
+          {{photo.id}}
+        </td>
+        <td>
+          {{photo.title}}
+        </td>
+        <td>
+          <img [src]="photo.url" class="imgwidth">
+        </td>
+  
+      </tr>
+    </tbody>
+  </table>

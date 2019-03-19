@@ -1,0 +1,31 @@
+<table>
+  <thead>
+    <tr>
+      <th>Id </th>
+      <th>Name </th>
+      <th>Website</th>
+      <th>Company </th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users">
+      <td>
+        {{user.id}}
+      </td>
+      <td>
+        {{user.name}}
+      </td>
+      <td>
+        {{user.website}}
+      </td>
+      <td>
+        {{user.company.name}}
+      </td>
+      <td>
+        <a [routerLink]="['/albums/', user.id]">View Albums</a>
+      </td>
+
+    </tr>
+  </tbody>
+</table>
